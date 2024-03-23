@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <title>Exercise 9</title>
+</head>
+
+<body>
+  <p>Exer #9: Create a JS program that displays the result of cubing a number coming from
+    the user. Pass a number to a function that cubes a number and returns the result. The
+    display should execute within the function that calls the cube method.</p>
+
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number" name="number">
+    <button onclick="calculateCube()">Submit</button>
+    <p style="font-size: 40px;" id="result"></p>
+    
+  <a style="text-decoration: none; "href="index.html">
+    <button class="home">Home</button>
+    </a>
+  <script>
+    function calculateCube() {
+            const numberInput = document.getElementById('number');
+            const number = parseFloat(numberInput.value);
+
+            if (isNaN(number)) {
+                document.getElementById('result').innerText = "Ayos naman haha";
+                return;
+            }
+
+            const cubeResult = cube(number);
+            document.getElementById('result').innerText = `The cube of ${number} is ${cubeResult}.`;
+        }
+
+        function cube(num) {
+            return num * num * num;
+        }
+  </script>
+
+</body>
+
+<style>
+body {
+  background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
+}
+
+p {
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-style: bold;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-style: normal;
+}
+
+.home {
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 34rem;
+  border-radius: 5rem;
+  background-color: burlywood;
+}
+
+.home:hover{
+  background-color: darkkhaki
+}
+</style>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <title>Exercise 5</title>
+</head>
+
+<body>
+  <p>Exer #5: Create a JS program to read the age of a candidate and determine whether the
+    user is eligible for casting his/her own vote.</p>
+  <input type="number" id="ageInput">
+  <button onclick="checkEligibility()">Submit</button>
+<br>
+<p id="result"></p>
+
+  <a style="text-decoration: none; "href="index.html">
+    <button class="home">Home</button>
+    </a>
+  <script>
+    function checkEligibility() {
+    
+    var age = parseInt(document.getElementById("ageInput").value);
+    
+    
+    if (age >= 18) {
+        document.getElementById("result").innerText = "You are eligible to cast your vote.";
+    } else {
+        document.getElementById("result").innerText = "You are not eligible to cast your vote.Need 18+ Years Old";
+    }
+}
+
+  </script>
+
+</body>
+
+<style>
+body {
+  background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
+}
+
+p {
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-style: bold;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-style: normal;
+}
+
+.home {
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 34rem;
+  border-radius: 5rem;
+  background-color: burlywood;
+}
+
+.home:hover{
+  background-color: darkkhaki
+}
+</style>
+</html>

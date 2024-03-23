@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <title>Exercise 6</title>
+</head>
+
+<body>
+  <p>Exer #6: Create a JS program that identifies the proper remarks based on students&#39;
+    grade as an input.</p>
+    
+    <label for="grade">Enter your grade:</label>
+    <input type="number" id="grade" name="grade" min="0" max="100">
+    <button onclick="identifyRemark()">Identify Remark</button>
+    <p style="font-size: 50px;" id="remark"></p>
+
+  <a style="text-decoration: none; "href="index.html">
+    <button class="home">Home</button>
+    </a>
+  <script>
+    function identifyRemark() {
+            const gradeInput = document.getElementById('grade');
+            const grade = parseFloat(gradeInput.value);
+
+            if (isNaN(grade) || grade < 0 || grade > 100) {
+                document.getElementById('remark').innerText = "Invalid number";
+                return;
+            }
+
+            let remark = "";
+            if (grade >= 96 && grade <= 100) {
+                remark = "Excellent";
+            } else if (grade >= 90 && grade < 96) {
+                remark = "Very Satisfactory";
+              } else if (grade >= 84 && grade < 90) {
+                remark = "Satisfactory";
+            } else if (grade >= 78 && grade < 84) {
+                remark = "Fairly Satisfactiom";
+            } else if (grade >= 75 && grade < 78) {
+                remark = "Passed";
+            } else if (grade >= 70 && grade < 75) {
+                remark = "Conditional Failure";
+            } else if (grade >= 0 && grade < 70) {
+                remark = "Failed";
+            }
+
+            document.getElementById('remark').innerText = remark;
+        }
+  </script>
+
+</body>
+
+<style>
+body {
+  background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
+}
+
+p {
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-style: bold;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-style: normal;
+}
+
+.home {
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 34rem;
+  border-radius: 5rem;
+  background-color: burlywood;
+}
+
+.home:hover{
+  background-color: darkkhaki
+}
+</style>
+</html>

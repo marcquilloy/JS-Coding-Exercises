@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <title>Exercise 10</title>
+</head>
+
+<body>
+  <p>Exer #10: Create a JS program that calculates two (2) numbers input by the user.
+    Perform the following math operations using the given inputs:</p>
+  
+  <form  style="font-size: 20px; width;">
+  Enter First Number : <input style="width: 150px; height: 20px;" type="number" id="firstNumber" /> <br>
+  Enter Second Number : <input style="width: 150px; height: 20px;" type="number" id="secondNumber" /> <br>
+
+  <input class="button" type="button" onclick="multiplyBy()" Value="Multiply" />
+  <input class="button" type="button" onclick="divideBy()" Value="Divide" />
+  <input class="button" type="button" onclick="addBy()" Value="Add" />
+  <input class="button" type="button" onclick="subBy()" Value="Subtract" />
+  </form>
+
+  <p style="font-size: 40px;">The Result is : <br>
+  <h1 style="font-size: 40px;"><span id = "result"></span></h1>
+  </p>
+
+  <a style="text-decoration: none; "href="index.html">
+    <button class="home">Home</button>
+    </a>
+  <script>
+    function multiplyBy()
+    {
+      num1 = Number(document.getElementById("firstNumber").value)
+      num2 = Number(document.getElementById("secondNumber").value)
+      document.getElementById("result").innerHTML = num1 * num2;
+    }
+
+    function divideBy()
+    {
+      num1 = Number(document.getElementById("firstNumber").value)
+      num2 = Number(document.getElementById("secondNumber").value)
+      document.getElementById("result").innerHTML = num1 / num2;
+    }
+
+    function addBy()
+    {
+      num1 = Number(document.getElementById("firstNumber").value)
+      num2 = Number(document.getElementById("secondNumber").value)
+      document.getElementById("result").innerHTML = num1 + num2;
+    }
+
+    function subBy()
+    {
+      num1 = Number(document.getElementById("firstNumber").value)
+      num2 = Number(document.getElementById("secondNumber").value)
+      document.getElementById("result").innerHTML = num1 - num2;
+    }
+  </script>
+
+</body>
+
+<style>
+
+.button {
+  border-radius: 10rem;
+  width: 90px;
+  height: 30px;
+  font-size: 15px;
+  font-family: "Madimi One";
+}
+
+.button:hover {
+  background-color: aquamarine;
+}
+
+body {
+  background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
+}
+
+p {
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-style: bold;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-style: normal;
+}
+
+.home {
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 34rem;
+  border-radius: 5rem;
+  background-color: burlywood;
+}
+
+.home:hover{
+  background-color: darkkhaki
+}
+</style>
+</html>

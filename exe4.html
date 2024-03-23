@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <title>Exercise 4</title>
+</head>
+
+<body>
+  <p>Exer #4: Create a JS program that will tell the user if the character they input is Vowel
+    or Consonant.
+    The five alphabets A, E, I, O and U are called vowels. All other alphabets except these 5
+    vowel letters are called consonants.
+    Assuming that the user will always enter an alphabet character.</p>
+ <br>
+    <input style="width: 300px; height: 40px;"type="text" id="charInput">
+    <br>
+    <button Style="font-size: 30px;"onclick="checkChar()">Check</button>
+
+    <p style="font-size: 40px" id="result"></p>
+
+    <a style="text-decoration: none; "href="index.html">
+      <button class="home">Home</button>
+      </a>
+  <script>
+    function checkChar() {
+    
+    var char = document.getElementById("charInput").value.toLowerCase();
+    
+    
+    if (char.length === 1) {
+        
+        if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
+            document.getElementById("result").innerText = char + "' is a vowel.";
+        } else {
+            document.getElementById("result").innerText = char + "' is a consonant.";
+        }
+    } else {
+        document.getElementById("result").innerText 
+    }
+}
+  </script>
+
+</body>
+
+<style>
+body {
+  background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
+}
+
+p {
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-style: bold;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-style: normal;
+}
+
+.home {
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 34rem;
+  border-radius: 5rem;
+  background-color: burlywood;
+}
+
+.home:hover{
+  background-color: darkkhaki
+}
+</style>
+</html>
